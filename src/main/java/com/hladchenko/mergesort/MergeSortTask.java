@@ -23,11 +23,11 @@ public class MergeSortTask<T extends Comparable<T>> extends RecursiveAction {
   protected void compute() {
     if (list.size() > 1) {
 
-      var left = new ArrayList<>(list.subList(0 , list.size() / 2));
+      var left = new ArrayList<>(list.subList(0, list.size() / 2));
       var right = new ArrayList<>(list.subList(list.size() / 2, list.size()));
 
       var leftTask = new MergeSortTask<>(left);
-      var rightTask= new MergeSortTask<>(right);
+      var rightTask = new MergeSortTask<>(right);
 
       switch (variant) {
         case 1 -> {

@@ -13,7 +13,7 @@ public class Main {
     System.out.println("------ Sort Check ------");
     int[] test = new int[]{10, 5, 20, 30, 2, 7, 9, -2, 15};
     SimpleMergeSort.sort(test);
-    System.out.println("SimpleMerge: " +Arrays.toString(test));
+    System.out.println("SimpleMerge: " + Arrays.toString(test));
 
     ArrayList<Integer> integers = new ArrayList<>(List.of(400, 12, -6, 27, 10, 9, 11));
     ListMergeSort.sort(integers);
@@ -23,7 +23,6 @@ public class Main {
     MergeSortTask<Integer> mergeSortTaskTest = new MergeSortTask<>(integers2);
     ForkJoinPool.commonPool().invoke(mergeSortTaskTest);
     System.out.println("ForkMerge: " + integers2);
-
 
     int n = 10_000_000;
     System.out.println("\n------  Time Check for " + n + " elements ------");
@@ -84,7 +83,7 @@ public class Main {
     return arr;
   }
 
-  private static ArrayList<Integer> convertToArrayList (int[] arr) {
+  private static ArrayList<Integer> convertToArrayList(int[] arr) {
     ArrayList<Integer> list = new ArrayList<>();
     for (var item : arr) {
       list.add(item);
